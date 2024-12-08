@@ -3,43 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Owais Tabassum - Portfolio</title>
-    <!-- Link to CSS -->
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Owais Tabassum</h1>
-            <p>Electrical Engineer | RF & Embedded Systems Specialist</p>
+        <div class="semi-transparent-box welcome-box">
+            <h1>Welcome to My Portfolio</h1>
+            <p class="main-text">Please Navigate through the following drop down menus :)</p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li class="dropdown">
-                    <a href="#">Projects</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#longboard">Electric Longboard</a></li>
-                        <li><a href="#vehicle">Autonomous Vehicle</a></li>
-                        <li><a href="#charging">Wireless Charging</a></li>
-                        <li><a href="#snowplow">Autonomous Snowplow</a></li>
-                    </ul>
-                </li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
     </header>
     <main>
-        <section id="about">
-            <div class="container">
-                <img src="your-photo.jpg" alt="Your Photo" class="profile-photo">
-                <h2>About Me</h2>
-                <p>Welcome to my portfolio! I am a motivated Electrical Engineer with expertise in RF systems, embedded programming, and sustainable designs...</p>
+        <div class="content-container">
+            <img src="your-photo.jpg" alt="Your Professional Photo" class="profile-photo">
+        </div>
+
+        <div class="semi-transparent-box name-box">
+            <h2 class="name-text">Owais Tabassum</h2>
+        </div>
+        <div class="semi-transparent-box about-box">
+            <h3>About Me:</h3>
+            <p>
+                Hi, I'm Owais Tabassum. I am an electrical engineer passionate about designing and implementing 
+                cutting-edge solutions in the field of RF systems, telecommunications, and innovative circuit designs. 
+                From my early days of experimenting with electronics to completing impactful engineering projects, I’ve 
+                always been driven by a curiosity to explore how technology can shape our world.
+            </p>
+            <p>
+                This website is a reflection of my journey, showcasing the projects I've worked on, the skills I've honed, 
+                and the experiences that have shaped me into the engineer I am today. Whether it's working on hydroponic 
+                systems for sustainable farming or building autonomous vehicles using IoT technology, my projects have been 
+                centered around solving real-world problems with creativity and technical expertise.
+            </p>
+            <p>
+                Outside of engineering, I enjoy taking on challenging hobbies that fuel my curiosity and determination. 
+                Whether it’s exploring new technologies or delving deeper into problem-solving, my life has been a constant 
+                pursuit of learning and innovation. Thank you for visiting my portfolio, and I hope it provides you with a 
+                glimpse into my passion for electrical engineering and what I aim to achieve in the future.
+            </p>
+        </div>
+        
+        <div class="grid-container">
+            <div class="dropdown">
+                <button class="dropdown-button">Projects</button>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="showContent('Option 1')">Option 1</a></li>
+                    <li><a href="#" onclick="showContent('Option 2')">Option 2</a></li>
+                </ul>
             </div>
-        </section>
+            <div class="dropdown">
+                <button class="dropdown-button">Work Experience</button>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="showContent('Option A')">Option A</a></li>
+                    <li><a href="#" onclick="showContent('Option B')">Option B</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-button">Resume and Documents</button>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="showContent('Option X')">Option X</a></li>
+                    <li><a href="#" onclick="showContent('Option Y')">Option Y</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-button">Hobbies</button>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="showContent('Option Alpha')">Option Alpha</a></li>
+                    <li><a href="#" onclick="showContent('Option Beta')">Option Beta</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="split-screen" class="split-screen hidden">
+            <div class="split-content">
+                <p id="content-text">Content will appear here</p>
+            </div>
+        </div>
     </main>
+    <script src="scripts.js"></script>
 </body>
 </html>

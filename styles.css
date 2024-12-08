@@ -1,91 +1,235 @@
-/* General Styling */
+/* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background: url('background.jpg') no-repeat center top;
+    background-size: contain;
+    color: black;
+    min-height: 200vh;
 }
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
+html, body {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
 }
 
-/* Header and Navigation */
-header {
-    background: #0073e6;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
+/* Header Text */
 header h1 {
+    font-size: 3em;
+    color: black;
     margin: 0;
-    font-size: 2.5em;
-}
-header p {
-    margin: 10px 0 0;
 }
 
-nav {
-    background: #004080;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-}
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-}
-nav ul li {
-    margin: 0 15px;
-    position: relative;
-}
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-nav ul li a:hover {
-    color: #ffd700;
+/* Main Text (for subtitle below Welcome Header) */
+.main-text {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: black;
 }
 
-/* Dropdown Styling */
-.dropdown-menu {
+/* Welcome Box */
+.welcome-box {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    border: 2px solid #000000; /* Black border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Internal spacing */
+    position: absolute; /* Positioning for flexibility */
+    top: 20px; /* Vertical positioning */
+    left: 25%; /* Center horizontally */
+    transform: translateX(-50%); /* Center align with transformation */
+    text-align: center; /* Center the text */
+    width: 50%; /* Width relative to screen */
+    max-width: 800px; /* Limit the maximum width */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for aesthetics */
+}
+
+/* Circular Profile Photo */
+.profile-photo {
+    width: 250px;
+    height: 270px;
+    border-radius: 50%;
+    border: 5px solid #000000;
+    margin: 20px;
+    position: absolute;
+    top: 108px;
+    right: 207px;
+}
+
+/* Dropdown Menus */
+.grid-container {
+    position: relative; /* Parent element for absolute positioning */
+    width: 100%; /* Full width of the page */
+    height: auto; /* Adjust height based on content */
+}
+
+/* Dropdown 1 */
+.grid-container > .dropdown:nth-child(1) {
+    position: absolute;
+    top: 150px; /* Adjust dropdown's vertical position */
+    left: 10px; /* Adjust dropdown's horizontal position */
+}
+
+/* Dropdown 2 */
+.grid-container > .dropdown:nth-child(2) {
+    position: absolute;
+    top: 150px; /* Adjust dropdown's vertical position */
+    left: 375px; /* Adjust dropdown's horizontal position */
+}
+
+/* Dropdown 3 */
+.grid-container > .dropdown:nth-child(3) {
+    position: absolute;
+    top: 300px; /* Adjust dropdown's vertical position */
+    left: 190px; /* Center horizontally */
+}
+
+/* Dropdown 4 */
+.grid-container > .dropdown:nth-child(4) {
+    position: absolute;
+    top: 300px; /* Adjust dropdown's vertical position */
+    left: 525px; /* Adjust dropdown's horizontal position */
+}
+
+/* Individual Dropdowns */
+.dropdown {
+    background-color: white;
+    border: 5px solid #000000;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 100px; /* Consistent width */
+}
+
+.dropdown-button {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
-    background: #0073e6;
+    background-color: white;
+    border: 1px solid #ddd;
+    z-index: 1;
+    width: 150px;
     list-style: none;
-    padding: 10px 0;
+    padding: 0;
     margin: 0;
-    top: 30px;
-    left: 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-.dropdown-menu li {
-    padding: 5px 20px;
-}
-.dropdown-menu li a {
-    color: #fff;
-}
-.dropdown-menu li a:hover {
-    color: #ffd700;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Design */
+.dropdown-content li {
+    padding: 10px;
+    text-align: left;
+}
+
+.dropdown-content li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Split Screen */
+.split-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.split-screen.hidden {
+    display: none;
+}
+
+.split-content {
+    text-align: center;
+    font-size: 1.5em;
+    color: black;
+}
+
+/* Responsive Dropdowns */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        text-align: center;
+    .grid-container > .dropdown:nth-child(1),
+    .grid-container > .dropdown:nth-child(2),
+    .grid-container > .dropdown:nth-child(3),
+    .grid-container > .dropdown:nth-child(4) {
+        position: static; /* Stack dropdowns naturally on smaller screens */
+        margin: 10px auto;
     }
-    .dropdown-menu {
-        position: static;
-        box-shadow: none;
+
+    .dropdown {
+        width: 100%; /* Stretch dropdowns on smaller screens */
     }
+}
+
+/* Semi-Transparent Box */
+.semi-transparent-box {
+    background-color: rgba(255, 255, 255, 0.7); /* White with transparency */
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 15px;
+    position: absolute;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Name Box */
+.name-box {
+    top: 50px; /* Adjust vertical position */
+    right: 50px; /* Adjust horizontal position */
+    width: 160px; /* Horizontal width */
+    height: 120px; /* Vertical height */
+    padding: 10px; /* Internal padding for text */
+}
+
+/* Name Text */
+.name-text {
+    font-size: 2em; /* Adjust font size for the name */
+    font-weight: bold;
+    color: black;
+    line-height: 1; /* Ensure the text fits nicely in the box */
+}
+
+/* About Me Box */
+.about-box {
+    top: 475px; /* Adjust vertical position */
+    left: 50%; /* Centered horizontally */
+    transform: translateX(-50%);
+    width: 1000px; /* Adjust width */
+    height: auto; /* Set a fixed height */
+    text-align: left; /* Align text to the left */
+    overflow-y: scroll; /* Adds vertical scrolling if content exceeds height */
+    padding-right: 10px; /* Space for scrollbar */
+}
+
+.about-box h3 {
+    font-size: 1.5em; /* Title font size */
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.about-box p {
+    font-size: 1em; /* Text font size */
+    line-height: 1.6; /* Spacing between lines */
+    color: black;
 }
