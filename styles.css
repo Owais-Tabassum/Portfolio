@@ -4,7 +4,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background: url('background.jpg') no-repeat top center;
-    background-size: contain; /* Ensures background is as per your original */
+    background-size: contain;
     color: black;
     min-height: 200vh; /* Allow full page scrolling */
 }
@@ -61,7 +61,7 @@ header h1 {
 /* About Me Box */
 .about-box {
     position: absolute;
-    top: 475px; /* Adjust vertical position */
+    top: 500px; /* Adjust vertical position */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%);
     width: 1000px; /* Adjust width */
@@ -114,33 +114,33 @@ header h1 {
 /* Dropdown Menus */
 .grid-container {
     position: relative; /* Keep elements in place */
-    width: 100%;
+    width: 1200px; /* Lock dropdown grid to a fixed layout */
     height: auto;
+    margin: 0 auto;
 }
 
-/* Dropdown Positioning */
-.grid-container > .dropdown:nth-child(1) {
+.grid-container > .dropdown {
     position: absolute;
-    top: 150px;
-    left: 10px;
+}
+
+.grid-container > .dropdown:nth-child(1) {
+    top: 200px;
+    left: 50px;
 }
 
 .grid-container > .dropdown:nth-child(2) {
-    position: absolute;
-    top: 150px;
-    left: 375px;
+    top: 200px;
+    left: 400px;
 }
 
 .grid-container > .dropdown:nth-child(3) {
-    position: absolute;
     top: 300px;
-    left: 190px;
+    left: 200px;
 }
 
 .grid-container > .dropdown:nth-child(4) {
-    position: absolute;
     top: 300px;
-    left: 525px;
+    left: 500px;
 }
 
 /* Individual Dropdowns */
