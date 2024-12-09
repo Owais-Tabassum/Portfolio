@@ -62,4 +62,145 @@ header h1 {
 .about-box {
     position: absolute;
     top: 500px; /* Adjust vertical position */
-    le
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    width: 1000px; /* Adjust width */
+    height: auto; /* Dynamically expands with content */
+    text-align: left;
+    padding-right: 10px; /* Add spacing */
+}
+
+.about-box h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.about-box p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: black;
+}
+
+/* Semi-Transparent Box */
+.semi-transparent-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 15px;
+    position: absolute;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Name Box */
+.name-box {
+    top: 50px; /* Adjust vertical position */
+    right: 50px; /* Adjust horizontal position */
+    width: 160px; /* Horizontal width */
+    height: 120px; /* Vertical height */
+    padding: 10px; /* Internal padding */
+}
+
+/* Name Text */
+.name-text {
+    font-size: 2em; /* Adjust font size for the name */
+    font-weight: bold;
+    color: black;
+    line-height: 1;
+}
+
+/* Dropdown Menus */
+.grid-container {
+    position: relative; /* Keep elements in place */
+    width: 1200px; /* Lock dropdown grid to a fixed layout */
+    height: auto;
+    margin: 0 auto;
+}
+
+.grid-container > .dropdown {
+    position: absolute;
+}
+
+.grid-container > .dropdown:nth-child(1) {
+    top: 200px;
+    left: 50px;
+}
+
+.grid-container > .dropdown:nth-child(2) {
+    top: 200px;
+    left: 400px;
+}
+
+.grid-container > .dropdown:nth-child(3) {
+    top: 300px;
+    left: 200px;
+}
+
+.grid-container > .dropdown:nth-child(4) {
+    top: 300px;
+    left: 500px;
+}
+
+/* Individual Dropdowns */
+.dropdown {
+    background-color: white;
+    border: 5px solid #000000;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 100px;
+}
+
+.dropdown-button {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Dropdown Menu Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    z-index: 1;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content li {
+    padding: 10px;
+    text-align: left;
+}
+
+.dropdown-content li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Split Screen */
+.split-screen {
+    display: none; /* Hidden until explicitly shown */
+}
+
+/* Remove "Content will appear here" */
+.split-content {
+    display: none;
+}
